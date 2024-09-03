@@ -56,7 +56,7 @@ jobs:
       - name: Install test prerequisites
         run: |
           brew install tox
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           path: sage-local-artifact
           name: ${{ env.LOCAL_ARTIFACT_NAME }}
@@ -164,7 +164,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         if: "!contains(matrix.tox_system_factor, 'nobootstrap')"
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           path: .
           name: dist
