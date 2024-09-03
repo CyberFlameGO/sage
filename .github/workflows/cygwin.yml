@@ -95,7 +95,7 @@ jobs:
       if: inputs.sage_trac_git != ''
 
     - name: Download upstream artifact
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4.1.7
       with:
         path: upstream
         name: ${{ inputs.upstream_artifact }}
@@ -106,7 +106,7 @@ jobs:
       if: inputs.upstream_artifact
 
     - name: Download sage-local artifact
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v4.1.7
       with:
         name: ${{ env.LOCAL_ARTIFACT_NAME }}
         path: C:\\tools\\cygwin\\tmp
